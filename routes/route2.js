@@ -4,7 +4,7 @@ var router = express.Router();
 var colors = require('../colors.json');
 
 router.get('/all', function(req, res, next) {
-  res.send(colors);
+  res.json(colors);
 });
 
 router.get('/:getColor', (req, res, next) => {
@@ -18,7 +18,7 @@ router.get('/:getColor', (req, res, next) => {
     i++;
   }
   
-  res.send(colors.colors[i]);
+  res.json(colors.colors[i]);
 })
 
 module.exports = router;

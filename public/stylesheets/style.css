@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+div {
+  border: 2px;
+  border-style: solid;
+  height: 50px;
+  width: 150px;
+  background-color: red;
+}
