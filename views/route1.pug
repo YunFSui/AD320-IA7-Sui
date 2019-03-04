@@ -2,3 +2,14 @@ extends layout
 
 block content
   div#bluh
+  script. 
+    var bluh = document.getElementById("bluh"),
+        styl = window.getComputedStyle(bluh),
+        bgc  = styl.getPropertyValue('background-color');
+    bluh.addEventListener("click", changeColor);
+    function changeColor() {
+      if (bgc == "rgb(255, 0, 0)") this.style.backgroundColor = "blue"
+      else this.style.backgroundColor = "red"
+    }
+    
+
